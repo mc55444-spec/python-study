@@ -1,0 +1,38 @@
+import math
+
+# 读取输入的成绩并转换为浮点数列表
+marks = list(map(float, input().split()))
+
+# 计算平均分
+average = sum(marks) / len(marks)
+
+# 使用math.floor取整数部分
+final_score = math.floor(average)
+
+# 根据评分标准确定字母等级
+if final_score >= 93:
+    grade = 'A'
+elif final_score >= 88:
+    grade = 'A-'
+elif final_score >= 83:
+    grade = 'B+'
+elif final_score >= 78:
+    grade = 'B'
+elif final_score >= 73:
+    grade = 'B-'
+elif final_score >= 68:
+    grade = 'C+'
+elif final_score >= 63:
+    grade = 'C'
+elif final_score >= 58:
+    grade = 'C-'
+elif final_score >= 53:
+    grade = 'D+'
+elif final_score >= 50:
+    grade = 'D'
+
+else:
+    grade = 'F'
+
+# 输出结果
+print(grade)
